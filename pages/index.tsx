@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { useTranslation } from "next-export-i18n";
+import { useLanguageQuery, useTranslation } from "next-export-i18n";
 import i18n from "../i18n";
 import Link from "next/link";
 import LanguageToggler from "../components/language-toggle";
@@ -39,6 +39,7 @@ const newVisitor = async (url: string) => {
 
 export default function Home() {
     const { t } = useTranslation();
+    const [query] = useLanguageQuery();
     const [isLanguageToggleActive, setIsLanguageToggleActive] = useState<boolean>(false);
     const [resumeFile, setResumeFile] = useState<string>("Michael-Vanhoutte-Resume.pdf");
     const router = useRouter();
@@ -70,9 +71,9 @@ export default function Home() {
             <SEO title="Michael Vanhoutte Resume" description="Michael Vanhoutte | Software engineer, specializes in javascript and web applications" name="Michael Vanhoutte" type="website" />
             <div id="root">
                 <header id="main">
-                    <a href="https://www.mvanhoutte.com">
+                    <Link href={{pathname: "https://www.mvanhoutte.com", query: query }}>
                         <h1 id="mainTitle">Michael Vanhoutte</h1>
-                    </a>
+                    </Link>
                     <h3>{t("jobTitle")}</h3>
                     <PDFLink download href={resumeFile}>
                         <PDFIcon src="/images/icons/pdf.svg" alt="pdfDownload" />
@@ -180,7 +181,7 @@ export default function Home() {
                             <div>{t("visitor")}</div>
                             <div id="count">...</div>
                             <div className="social">
-                                <Link href="https://mvanhoutte.com/">Website</Link>
+                                <Link href={{pathname: "https://www.mvanhoutte.com", query: query }}>Website</Link>
                                 <Link href="https://github.com/MichaelVanhoutte1">Github</Link>
                                 <Link href="https://www.linkedin.com/in/michael-vanhoutte/">
                                     Linkedin
