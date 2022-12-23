@@ -46,7 +46,7 @@ export default function Home() {
     useEffect(() => {
         newVisitor(url);
         apiCall(url);
-    });
+    }, []);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
