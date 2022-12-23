@@ -36,7 +36,6 @@ const LanguageToggler = (props: Props) => {
         <>
             <LanguageIcon
                 ref={languageRef}
-                loading="lazy"
                 onClick={() => toggleLanguagePopup(!isLanguageToggleActive)}
                 src="/images/icons/language.svg"
                 alt="languageToggle"

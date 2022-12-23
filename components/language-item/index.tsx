@@ -45,7 +45,7 @@ const LanguageItem = (props: Props) => {
             >
                 <LanguageSwitcher lang={languageCode}>
                     <LanguageText>{languageCode.toLocaleUpperCase()}</LanguageText>
-                    <LanguageIcon loading="lazy" src={src} alt={alt} />
+                    <LanguageIcon src={src} alt={alt} />
                 </LanguageSwitcher>
             </LanguageDiv>
         </>
