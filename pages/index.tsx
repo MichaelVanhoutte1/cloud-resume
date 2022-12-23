@@ -1,11 +1,13 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { useTranslation } from "next-export-i18n";
+import i18n from "../i18n";
 import Link from "next/link";
 import LanguageToggler from "../components/language-toggle";
 import LanguageItem from "../components/language-item";
 import { LanguagePopup, PDFIcon, PDFLink } from "../styles/index.styled";
 import cs from "classnames";
+import { useRouter } from "next/router";
 
 const corsWorkaround = "https://cors-workaround.herokuapp.com/";
 const url = `${corsWorkaround}https://9q7tdld473.execute-api.us-east-1.amazonaws.com/items`;
@@ -37,11 +39,30 @@ const newVisitor = async (url: string) => {
 export default function Home() {
     const { t } = useTranslation();
     const [isLanguageToggleActive, setIsLanguageToggleActive] = useState<boolean>(false);
+    const [resumeFile, setResumeFile] = useState<string>("Michael-Vanhoutte-Resume.pdf");
+    const router = useRouter();
 
     useEffect(() => {
         newVisitor(url);
         apiCall(url);
     });
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            if (!router.query.lang) {
+                let defaultLocale = navigator.languages[0].split("-")[0];
+                if (defaultLocale === "nl") {
+                    setResumeFile("Michael-Vanhoutte-CV.pdf");
+                }
+            } else {
+                if (router.query.lang?.toString() === "nl") {
+                    setResumeFile("Michael-Vanhoutte-CV.pdf");
+                } else {
+                    setResumeFile("Michael-Vanhoutte-Resume.pdf");
+                }
+            }
+        }
+    }, [router.query.lang]);
 
     return (
         <>
@@ -64,7 +85,9 @@ export default function Home() {
                         <h1 id="mainTitle">Michael Vanhoutte</h1>
                     </a>
                     <h3>{t("jobTitle")}</h3>
-                    <PDFLink href=""><PDFIcon src="/images/icons/pdf.svg" alt="pdfDownload" /></PDFLink>
+                    <PDFLink download href={resumeFile}>
+                        <PDFIcon src="/images/icons/pdf.svg" alt="pdfDownload" />
+                    </PDFLink>
                     <LanguageToggler
                         isLanguageToggleActive={isLanguageToggleActive}
                         toggleLanguagePopup={setIsLanguageToggleActive}
