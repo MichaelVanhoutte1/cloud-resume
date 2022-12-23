@@ -8,6 +8,7 @@ import LanguageItem from "../components/language-item";
 import { LanguagePopup, PDFIcon, PDFLink } from "../styles/index.styled";
 import cs from "classnames";
 import { useRouter } from "next/router";
+import SEO from "../components/seo";
 
 const corsWorkaround = "https://cors-workaround.herokuapp.com/";
 const url = `${corsWorkaround}https://9q7tdld473.execute-api.us-east-1.amazonaws.com/items`;
@@ -66,19 +67,7 @@ export default function Home() {
 
     return (
         <>
-            <Head>
-                <meta charSet="UTF-8" />
-                <meta
-                    name="viewport"
-                    content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
-                />
-                <meta
-                    name="description"
-                    content="Michael Vanhoutte | Software engineer, specializes in javascript and web applications"
-                />
-                <meta name="author" content="Michael Vanhoutte" />
-                <title>Michael Vanhoutte Resume</title>
-            </Head>
+            <SEO title="Michael Vanhoutte Resume" description="Michael Vanhoutte | Software engineer, specializes in javascript and web applications" name="Michael Vanhoutte" type="website" />
             <div id="root">
                 <header id="main">
                     <a href="https://www.mvanhoutte.com">
