@@ -131,6 +131,7 @@ header>* {
 main {
     grid-template-columns: 1fr;
     grid-template-areas: "left""right";
+    padding-bottom: 123px;
 }
 
 main>* {

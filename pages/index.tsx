@@ -45,7 +45,11 @@ export default function Home() {
     const router = useRouter();
 
     useEffect(() => {
-        newVisitor(url);
+        if(!localStorage.getItem('hasVisited')){
+            newVisitor(url);
+            localStorage.setItem('hasVisited', 'true');
+        }
+        
         apiCall(url);
     }, []);
 
