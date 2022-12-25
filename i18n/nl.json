@@ -1,7 +1,7 @@
 {
     "jobTitle": "Software Ingenieur",
     "skills": "Vaardigheden",
-    "languages": "Talen: Nederlands, Engles, Spaans & Frans",
+    "languages": "Talen: Nederlands, Engels, Spaans & Frans",
     "frontend": "Frontend: HTML, CSS, SaSS, Styled-Components, Typescript, React, Redux, Gatsby & Next.js",
     "backend": "Backend: GraphQL, Docker & Firebase",
     "devops": "DevOps: AWS, Netlify, Jenkins & Github Actions",
@@ -12,7 +12,7 @@
     "certificate3": "Certificaat Modern Javascript Bootcamp. Udemy, 2022.",
     "shortSummaryTitle": "Korte samenvatting",
     "summaryWork": "Ik ben een gemotiveerde software ingenieur die graag de kunst van het ontwerpen combineert met programmeren. Ik kan gemakkelijk een UI/UX ontwerp vertalen naar code die zowel het ontwerp als de functionaliteit implementeert. Ik denk graag actief na over welke oplossing het beste bij een probleem past, met toekomstige veranderingen in het achterhoofd. Werken in een team is voor mij geen probleem. Ik ben gemakkelijk in de omgang met andere mensen, maar kan ook zelfstandig werken. Ik hou mezelf graag op de hoogte van nieuwe technologieën om altijd op de hoogte te zijn van de laatste trends.",
-    "summaryPrivate": "In mijn privéleven houd ik me graag bezig met persoonlijke projecten die me kunnen helpen dingen makkelijker te doen in het dagelijks leven. Naast programmeren heb ik ook een passie voor reizen, nieuwe mensen ontmoeten en leren over verschillende culturen. Ik probeer ook regelmatig naar de sportschool te gaan om een gezonde levensstijl te behouden.",
+    "summaryPrivate": "In mijn privéleven houd ik me graag bezig met persoonlijke projecten die een meerwaarde zijn voor taken die ik uitvoer in het dagelijkse leven. Naast programmeren heb ik ook een passie voor reizen, nieuwe mensen ontmoeten en leren over verschillende culturen. Ik probeer ook regelmatig naar de sportschool te gaan om een gezonde levensstijl te behouden.",
     "workExperience": "Werkervaring",
     "location1": "- Brugge, België / 2022",
     "companySummary1": "ontwerpt, ontwikkelt, en onderhoud webshops en complexe datasystemen.",
@@ -25,6 +25,6 @@
     "companySummary2": "is een onafhankelijke makelaar/consolidator die gespecialiseerd is in het verkopen van vliegtickets en chartervluchten voor bedrijven.",
     "job2task1": "Visuele regressietesten geïntegreerd met behulp van BackstopJS en Puppeteer voor meerdere codebases, waardoor het team wordt geïnformeerd over visuele inconsistenties.",
     "job2task2": "Meerdere codebases geupgrade naar nieuwere versies van ember en verschillende addons geupgrade naar v2 embroider format.",
-    "job2task3": "Nieuwe dynamische front-end applicatie gecreered voor een al bestaande back-end die zal gebruikt worden door honderden reisagentschappen.",
+    "job2task3": "Nieuwe dynamische front-end applicatie gecreërd voor een al bestaande back-end die zal gebruikt worden door honderden reisagentschappen.",
     "visitor": "U bent bezoeker nummer"
 }
