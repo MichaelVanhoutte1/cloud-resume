@@ -10,8 +10,7 @@ import cs from "classnames";
 import { useRouter } from "next/router";
 import SEO from "../components/seo";
 
-const corsWorkaround = "https://cors-workaround.herokuapp.com/";
-const url = `${corsWorkaround}https://9q7tdld473.execute-api.us-east-1.amazonaws.com/items`;
+const url = `https://9q7tdld473.execute-api.us-east-1.amazonaws.com/items`;
 
 const apiCall = async (url: string) => {
     const headers = {
@@ -45,11 +44,11 @@ export default function Home() {
     const router = useRouter();
 
     useEffect(() => {
-        if(!localStorage.getItem('hasVisited')){
+        if (!localStorage.getItem("hasVisited")) {
             newVisitor(url);
-            localStorage.setItem('hasVisited', 'true');
+            localStorage.setItem("hasVisited", "true");
         }
-        
+
         apiCall(url);
     }, []);
 
@@ -72,10 +71,15 @@ export default function Home() {
 
     return (
         <>
-            <SEO title="Michael Vanhoutte Resume" description="Michael Vanhoutte | Software engineer, specializes in javascript and web applications" name="Michael Vanhoutte" type="website" />
+            <SEO
+                title="Michael Vanhoutte Resume"
+                description="Michael Vanhoutte | Software engineer, specializes in javascript and web applications"
+                name="Michael Vanhoutte"
+                type="website"
+            />
             <div id="root">
                 <header id="main">
-                    <Link href={{pathname: "https://www.mvanhoutte.com", query: query }}>
+                    <Link href={{ pathname: "https://www.mvanhoutte.com", query: query }}>
                         <h1 id="mainTitle">Michael Vanhoutte</h1>
                     </Link>
                     <h3>{t("jobTitle")}</h3>
@@ -185,7 +189,11 @@ export default function Home() {
                             <div>{t("visitor")}</div>
                             <div id="count">...</div>
                             <div className="social">
-                                <Link href={{pathname: "https://www.mvanhoutte.com", query: query }}>Website</Link>
+                                <Link
+                                    href={{ pathname: "https://www.mvanhoutte.com", query: query }}
+                                >
+                                    Website
+                                </Link>
                                 <Link href="https://github.com/MichaelVanhoutte1">Github</Link>
                                 <Link href="https://www.linkedin.com/in/michael-vanhoutte/">
                                     Linkedin
