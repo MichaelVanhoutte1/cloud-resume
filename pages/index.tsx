@@ -1,7 +1,5 @@
-import Head from "next/head";
 import { useEffect, useState } from "react";
 import { useLanguageQuery, useTranslation } from "next-export-i18n";
-import i18n from "../i18n";
 import Link from "next/link";
 import LanguageToggler from "../components/language-toggle";
 import LanguageItem from "../components/language-item";
@@ -140,6 +138,25 @@ export default function Home() {
                         <section id="work">
                             <h2>{t("workExperience")}</h2>
                             <div>
+                                <Link href="https://www.getflights.com">
+                                    <h3>{t("jobTitle")}</h3>
+                                </Link>
+                                {t("location2")}
+                            </div>
+                            <div>
+                                <Link href="https://www.getflights.com">
+                                    <h3>Getflights</h3>{" "}
+                                </Link>
+                                {t("companySummary2")}
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>{t("job2task1")}</li>
+                                    <li>{t("job2task2")}</li>
+                                    <li>{t("job2task3")}</li>
+                                </ul>
+                            </div>
+                            <div>
                                 <Link href="https://studioemma.be/">
                                     <h3>{t("jobTitle")}</h3>
                                 </Link>
@@ -158,26 +175,6 @@ export default function Home() {
                                     <li>{t("job1task3")}</li>
                                     <li>{t("job1task4")}</li>
                                     <li>{t("job1task5")}</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <Link href="https://www.getflights.com">
-                                    <h3>{t("jobTitle")}</h3>
-                                </Link>
-                                {t("location2")}
-                            </div>
-                            <div>
-                                <Link href="https://www.getflights.com">
-                                    <h3>Getflights</h3>{" "}
-                                </Link>
-                                {t("companySummary2")}
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>{t("job2task1")}</li>
-                                    <li>{t("job2task2")}</li>
-                                    <li>{t("job2task3")}</li>
                                 </ul>
                             </div>
                         </section>
